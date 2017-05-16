@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Move_Camera.unity
+  isLoaded: 1
+  isActive: 1

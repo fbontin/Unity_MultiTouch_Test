@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/1_Move_Cube.unity
+- path: Assets/_Scenes/2_Move_Rotate_Scale_Cube.unity
   isLoaded: 1
   isActive: 1

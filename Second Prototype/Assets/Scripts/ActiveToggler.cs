@@ -2,9 +2,9 @@
 
 namespace Assets.Scripts
 {
-	public class ToggleActivity : MonoBehaviour {
+	public class ActiveToggler : MonoBehaviour {
 
-		public void Toggle()
+		public void ToggleActivity()
 		{
 			gameObject.SetActive(!gameObject.activeInHierarchy);
 		}

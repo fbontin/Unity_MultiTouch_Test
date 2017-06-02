@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-	public class AddObject : MonoBehaviour
+	public class ObjectAdder : MonoBehaviour
 	{
 
-		public void Add(string objectType)
+		public void AddObject(string objectType)
 		{
 			PrimitiveType primitiveType;
 

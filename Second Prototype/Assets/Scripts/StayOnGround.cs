@@ -1,19 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class StayOnGround : MonoBehaviour {
+namespace Assets.Scripts
+{
+	public class StayOnGround : MonoBehaviour {
 	
-	// Update is called once per frame
-	void Update ()
-	{
-		Stay(gameObject);
-	}
+		void Update ()
+		{
+			var goPosition = gameObject.transform.localPosition;
+			var goY = gameObject.transform.localScale.y;
+			var parentPosition = gameObject.transform.parent.localPosition;
 
-	public static void Stay(GameObject go)
-	{
-		var pos = go.transform.position;
-		var height = go.transform.localScale.y;
-		go.transform.position = new Vector3(pos.x, height / 2, pos.z);
+			//set the objects lowest point to the same as the planes height
+			gameObject.transform.localPosition = new Vector3(goPosition.x, goY / 2 + parentPosition.y, goPosition.z);
+		}
 	}
 }

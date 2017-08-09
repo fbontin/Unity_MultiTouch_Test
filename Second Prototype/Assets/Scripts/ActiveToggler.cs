@@ -1,12 +1,20 @@
-﻿using UnityEngine;
+﻿using TouchScript;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-	public class ActiveToggler : MonoBehaviour {
+	public class ActiveToggler : MonoBehaviour
+	{
 
-		public void ToggleActivity()
+		public GameObject ScrollView;
+
+		void Update()
 		{
-			gameObject.SetActive(!gameObject.activeInHierarchy);
+			var tm = TouchManager.Instance;
+			if (tm.PressedPointersCount < 1 && !ScrollView.activeInHierarchy)
+			{
+				ScrollView.SetActive(true);
+			}	
 		}
 	}
 }

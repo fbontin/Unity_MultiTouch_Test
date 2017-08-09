@@ -10,14 +10,15 @@ namespace Assets.Scripts
 	public class ObjectAdder : MonoBehaviour
 	{
 
+		public GameObject Plane;
+		public GameObject UiPanel;
+		public Camera MainCamera;
+
 		public void AddObject(string objectType)
 		{
 			var primitiveType = ParsePrimitiveType(objectType);
-			Debug.Log("Adding " + objectType);
-
-			var plane = GameObject.Find("Plane");
 			var go = GameObject.CreatePrimitive(primitiveType);
-			go.transform.parent = plane.transform;
+			go.transform.parent = Plane.transform;
 
 			go.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
 			go.transform.localPosition = new Vector3(1f, 0.5f, 1f);
@@ -25,45 +26,57 @@ namespace Assets.Scripts
 			AddComponentsToGameObject(go);
 		}
 
-		public void AddObjectWithCoordinates(string objectType)
+		public void AddObjectWithCoordinates(GameObject objectType)
 		{
-			var primitiveType = ParsePrimitiveType(objectType);
-
-			var plane = GameObject.Find("Plane");
-			var go = GameObject.CreatePrimitive(primitiveType);
-			go.transform.parent = plane.transform;
+			var go = Instantiate(objectType);
+			go.transform.parent = Plane.transform;
 
 			go.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
 
-			SetPosition(go, plane);
-			AddComponentsToGameObject(go);
+			SetPosition(go);
 			ChangeTouchFocus();
 		}
 
-		private static void ChangeTouchFocus()
+		public void AddLiveObject(GameObject go)
 		{
-			//disable scrollview which includes the buttons
-			var scrollView = GameObject.Find("Scroll View");
-			//var sv = scrollView.GetComponent<ScrollRect>();
-			
+			go.transform.parent = Plane.transform;
+			go.AddComponent<StayOnGround>();
 
-			scrollView.SetActive(false);
-			
-			//var button = GameObject.Find("Cube Button").GetComponent<Button>();
-			//button.interactable = false;
+			go.transform.localScale = Vector3.one;
+			go.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+			Debug.Log("Local scale: " + go.transform.localScale);
+			Debug.Log("Local posit: " + go.transform.localPosition);
+
+			//remove listener which performs this function so that it is only performed the first time
+			go.GetComponent<TransformGesture>().OnTransformStart = null;
+		}
+
+		public void SetScaleToOne(GameObject go)
+		{
+			go.transform.localScale.Set(1, 1, 1);
+			Debug.Log("Scale should be one");
+		}
+
+		private void ChangeTouchFocus()
+		{
+			UiPanel.SetActive(false);
 
 			//cancel pointer/touch
 			var tm = TouchManager.Instance;
 			var firstPointerId = tm.PressedPointers[0].Id;
 			tm.CancelPointer(firstPointerId, true);
+
+			//var gesture = GetComponent<PressGesture>();
+			//if (gesture != null) gesture.Cancel();
 		}
 
-		private static void SetPosition(GameObject go, GameObject plane)
+		private void SetPosition(GameObject go)
 		{
 			var tapPosition = FindTapPosition();
 
 			var cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-			var distance = Vector3.Distance(cam.transform.position, plane.transform.position);
+			var distance = Vector3.Distance(cam.transform.position, Plane.transform.position);
 			var ray = cam.ScreenPointToRay(new Vector3(tapPosition.x, tapPosition.y, distance));
 
 			var pl = new Plane(Vector3.up, Vector3.zero);
@@ -79,10 +92,8 @@ namespace Assets.Scripts
 			if (tm.PressedPointersCount > 0)
 			{
 				var pos = tm.PressedPointers[0].Position;
-				Debug.Log("Real position: " + pos);
 				return pos;
 			}
-			Debug.Log("Position (0, 0) used");
 			return new Vector2(0, 0);
 		}
 
@@ -104,7 +115,6 @@ namespace Assets.Scripts
 		{
 			go.AddComponent<StayOnGround>();
 			go.AddComponent<TransformGesture>();
-
 			go.AddComponent<TapGesture>();
 			go.AddComponent<TappedHandler>();
 

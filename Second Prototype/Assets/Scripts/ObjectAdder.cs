@@ -3,7 +3,6 @@ using TouchScript.Behaviors;
 using TouchScript.Gestures;
 using TouchScript.Gestures.TransformGestures;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -13,6 +12,7 @@ namespace Assets.Scripts
 		public GameObject Plane;
 		public GameObject UiPanel;
 		public Camera MainCamera;
+		public Canvas MainUiCanvas;
 
 		public void AddObject(string objectType)
 		{
@@ -31,12 +31,20 @@ namespace Assets.Scripts
 			var go = Instantiate(objectType);
 			go.transform.parent = Plane.transform;
 
-			go.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+			if (MainCamera == null && UiPanel == null)
+			{
+				MainCamera = FindObjectOfType<Camera>();
+				UiPanel = GameObject.Find("UI Canvas Main (Action Buttons)");
+			}
+			go.GetComponent<TappedHandler>().MainCamera = MainCamera;
+			go.GetComponent<TappedHandler>().MainUiCanvas = MainUiCanvas;
+			
 
 			SetPosition(go);
 			ChangeTouchFocus();
 		}
 
+		//used for "moving" a 3d-object from UI to 3d-world
 		public void AddLiveObject(GameObject go)
 		{
 			go.transform.parent = Plane.transform;
@@ -66,9 +74,6 @@ namespace Assets.Scripts
 			var tm = TouchManager.Instance;
 			var firstPointerId = tm.PressedPointers[0].Id;
 			tm.CancelPointer(firstPointerId, true);
-
-			//var gesture = GetComponent<PressGesture>();
-			//if (gesture != null) gesture.Cancel();
 		}
 
 		private void SetPosition(GameObject go)
@@ -89,12 +94,7 @@ namespace Assets.Scripts
 		private static Vector2 FindTapPosition()
 		{
 			var tm = TouchManager.Instance;
-			if (tm.PressedPointersCount > 0)
-			{
-				var pos = tm.PressedPointers[0].Position;
-				return pos;
-			}
-			return new Vector2(0, 0);
+			return tm.PressedPointersCount > 0 ? tm.PressedPointers[0].Position : new Vector2(0, 0);
 		}
 
 		private static PrimitiveType ParsePrimitiveType(string objectType)

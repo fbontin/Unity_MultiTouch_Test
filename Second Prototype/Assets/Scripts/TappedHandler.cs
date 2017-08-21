@@ -27,20 +27,19 @@ namespace Assets.Scripts
 		{
 			//get scene objects
 			var screenPosition = MainCamera.WorldToScreenPoint(gameObject.transform.position);
-			//var canvas = GameObject.Find("UI Canvas").GetComponent<Canvas>();
 			var buttons = new List<Button>();
 
-			//create background button first (as it should be behind the other buttons)
+			//background button first (as it should be behind the other buttons)
 			CreateBackgroundButton(MainUiCanvas, buttons);
 			CreateRemoveButton(MainUiCanvas, screenPosition, buttons);
-			CreateNewColorButton(MainUiCanvas, screenPosition, buttons);
+			//CreateNewColorButton(MainUiCanvas, screenPosition, buttons);
 			CreateDuplicateButton(MainUiCanvas, screenPosition, buttons);
 		}
 
 		private void CreateDuplicateButton(Canvas canvas, Vector3 screenPosition, List<Button> buttons)
 		{
 			var copyButton = CreateButton(canvas, buttons, "Duplicate");
-			copyButton.transform.position = screenPosition + _menuOffset + new Vector3(0, 80);
+			copyButton.transform.position = screenPosition + _menuOffset + new Vector3(0, 40);
 			copyButton.onClick.AddListener(DuplicateGameObject);
 			copyButton.onClick.AddListener(() => DestroyActionMenu(buttons));
 		}
@@ -55,12 +54,14 @@ namespace Assets.Scripts
 			var oldScale = gameObject.transform.localScale;
 			var newPos = new Vector3(oldScale.x, 0, oldScale.z) / -2;
 			copy.transform.localPosition = oldPos + newPos;
+
+			Debug.Log("Duplicate clicked");
 		}
 
 		private void CreateNewColorButton(Component canvas, Vector3 screenPosition, ICollection<Button> buttons)
 		{
 			var newColorButton = CreateButton(canvas, buttons, "New Color");
-			newColorButton.transform.position = screenPosition + _menuOffset + new Vector3(0, 40);
+			newColorButton.transform.position = screenPosition + _menuOffset + new Vector3(0, 80);
 			newColorButton.onClick.AddListener(ChangeColor);
 		}
 
@@ -68,6 +69,7 @@ namespace Assets.Scripts
 		{
 			var rend = gameObject.GetComponent<Renderer>();
 			rend.material.SetColor("_Color", new Color(Random.value, Random.value, Random.value));
+			Debug.Log("change color");
 		}
 
 		private void CreateRemoveButton(Component canvas, Vector3 screenPosition, ICollection<Button> buttons)
@@ -81,6 +83,11 @@ namespace Assets.Scripts
 		private static Button CreateButton(Component canvas, ICollection<Button> buttons, string buttonText)
 		{
 			var button = Instantiate(Resources.Load<GameObject>("Prefabs/Button")).GetComponent<Button>();
+			button.interactable = true;
+
+			//var buttonPosition = new Vector2(button.transform.position.x, button.transform.position.y + 50);
+			//Debug.Log(button.image.IsRaycastLocationValid(buttonPosition, Camera.main));
+
 			buttons.Add(button);
 			button.transform.SetParent(canvas.transform);
 			button.GetComponentInChildren<Text>().text = buttonText;
@@ -101,6 +108,7 @@ namespace Assets.Scripts
 				.Select(b => b.gameObject)
 				.ToList()
 				.ForEach(Destroy);
+			Debug.Log("Background button was clicked");
 		}
 	}
 }

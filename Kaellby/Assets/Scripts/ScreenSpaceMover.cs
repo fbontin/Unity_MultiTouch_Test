@@ -13,12 +13,10 @@ public class ScreenSpaceMover : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		var camera = Camera.main;
-		var screenPosition = camera.WorldToScreenPoint(ObjectToFollow.transform.position);
-
-		//Debug.Log("Screen position: " + screenPosition);
-
+		var screenPosition = Camera.main.WorldToScreenPoint(ObjectToFollow.transform.position);
 		transform.position = screenPosition;
 
+		//FIX
+		//Debug.Log("cube: " + ObjectToFollow.transform.position);
 	}
 }

@@ -7,9 +7,9 @@ public class ObjectsMover : MonoBehaviour
 {
 
 	public ScreenTransformGesture TransformGesture;
-	public GameObject AllObjects;
 	public float TransformSpeedCoefficent;
 
+	private GameObject _parentObject;
 	private GameObject _superParent;
 
 	private void OnEnable()
@@ -21,6 +21,8 @@ public class ObjectsMover : MonoBehaviour
 		TransformGesture.TransformStarted += BeginRotateObjects;
 
 		TransformGesture.TransformCompleted += CompleteRotateObjects;
+
+		_parentObject = GameObject.FindWithTag("ParentObject");
 	}
 
 	private void OnDisable()
@@ -36,15 +38,30 @@ public class ObjectsMover : MonoBehaviour
 
 	private void TransformObjects(object sender, EventArgs e)
 	{
+		//move objects
+		/*
 		if (TransformGesture.NumPointers == 1)
 		{
 			var y = transform.position.y;
 			var transformSpeed = y / TransformSpeedCoefficent;
 
-			var newX = AllObjects.transform.position.x + TransformGesture.DeltaPosition.x * transformSpeed;
-			var newZ = AllObjects.transform.position.z + TransformGesture.DeltaPosition.y * transformSpeed;
-			var newPosition = new Vector3(newX, AllObjects.transform.position.y, newZ);
-			AllObjects.transform.position = newPosition;
+			var newX = _parentObject.transform.position.x + TransformGesture.DeltaPosition.x * transformSpeed;
+			var newZ = _parentObject.transform.position.z + TransformGesture.DeltaPosition.y * transformSpeed;
+			var newPosition = new Vector3(newX, _parentObject.transform.position.y, newZ);
+			_parentObject.transform.position = newPosition;
+		}
+		*/
+
+		//move camera
+		if (TransformGesture.NumPointers == 1)
+		{
+			var y = transform.position.y;
+			var transformSpeed = y / TransformSpeedCoefficent;
+
+			var newX = transform.position.x - TransformGesture.DeltaPosition.x * transformSpeed;
+			var newZ = transform.position.z - TransformGesture.DeltaPosition.y * transformSpeed;
+			var newPosition = new Vector3(newX, transform.position.y, newZ);
+			transform.position = newPosition;
 		}
 	}
 
@@ -79,9 +96,7 @@ public class ObjectsMover : MonoBehaviour
 
 			_superParent = new GameObject("SuperParent");
 			_superParent.transform.position = rotationCenter;
-
-			AllObjects.transform.SetParent(_superParent.transform, true);
-			//AllObjects.transform.parent = _superParent.transform;
+			_parentObject.transform.SetParent(_superParent.transform, true);
 		}
 	}
 
@@ -104,8 +119,7 @@ public class ObjectsMover : MonoBehaviour
 
 	private void CompleteRotateObjects(object sender, EventArgs e)
 	{
-		AllObjects.transform.parent = null;	
+		_parentObject.transform.parent = null;	
 		Destroy(_superParent);
-		Debug.Log("Completed rotation");
 	}
 }

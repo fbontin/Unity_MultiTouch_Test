@@ -8,35 +8,38 @@ public class TapHandler : MonoBehaviour
 {
 	public GameObject GeocommentInput;
 	public GameObject MapMarkers;
+	public GameObject ParentObject;
 
-	private GameObject _parentObject;
-	private GameObject _latestPositionObject;
 	private GameObject _mapMarker;
 
 	private void OnEnable()
 	{
-		GetComponent<TapGesture>().Tapped += OnTap;
-		_parentObject = GameObject.FindWithTag("ParentObject");
+		GetComponent<TapGesture>().Tapped += ShowNewGeocommentInput;
 	}
 
 	private void OnDisable()
 	{
-		GetComponent<TapGesture>().Tapped -= OnTap;
+		GetComponent<TapGesture>().Tapped -= ShowNewGeocommentInput;
 	}
 
-	private void OnTap(object sender, EventArgs e)
+	private void ShowNewGeocommentInput(object sender, EventArgs e)
 	{
-		var worldPosition = CreatePositionObject();
-		worldPosition = new Vector3(worldPosition.x, 0, worldPosition.z);
-
-
-		//move click point to center of screen.
-		_parentObject.transform.position -= worldPosition;
+		var worldPosition = GetWorldPosition(GetComponent<TapGesture>().ScreenPosition);
+		ParentObject.transform.position -= new Vector3(worldPosition.x, 0, worldPosition.z);
 
 		SetButtonListeners();
 		GeocommentInput.gameObject.SetActive(true);
+		GeocommentInput.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text = "";
 		GeocommentInput.GetComponentInChildren<InputField>().Select();
 		System.Diagnostics.Process.Start("tabtip.exe");
+	}
+	
+	private static Vector3 GetWorldPosition(Vector2 screenPosition)
+	{
+		var ray = Camera.main.ScreenPointToRay(screenPosition);
+		const float height = 25.0f;
+		var distance = (height - ray.origin.y) / ray.direction.y;
+		return ray.GetPoint(distance);
 	}
 
 	private void SetButtonListeners()
@@ -47,42 +50,31 @@ public class TapHandler : MonoBehaviour
 		buttons[2].onClick.AddListener(SaveGeocomment); //save button
 	}
 
-	private Vector3 CreatePositionObject()
+	private GameObject CreatePositionObject()
 	{
-		var worldPosition = GetWorldPosition();
-		var positionObject = new GameObject("EmptyPositionObject");
-		positionObject.transform.parent = _parentObject.transform;
+		var middleOfScreen = new Vector2((float) Screen.width/2, (float) Screen.height/2);
+		var worldPosition = GetWorldPosition(middleOfScreen);
+		var positionObject = new GameObject("EmptyPositionObject " + Guid.NewGuid());
+		positionObject.transform.parent = ParentObject.transform;
 		positionObject.transform.position = worldPosition;
-		_latestPositionObject = positionObject;
-
-		return worldPosition;
-	}
-
-	private Vector3 GetWorldPosition ()
-	{
-		var ray = GetComponent<Camera>().ScreenPointToRay(GetComponent<TapGesture>().ScreenPosition);
-	
-		//find distance of raycast when crossing y-plane
-		const float height = 25.0f;
-		var distance = (height - ray.origin.y) / ray.direction.y;
-		var p = ray.GetPoint(distance);
-		return p;
+		return positionObject;
 	}
 
 	public void SaveGeocomment()
 	{
 		_mapMarker = Instantiate(Resources.Load("Map Marker")) as GameObject;
 		_mapMarker.transform.SetParent(MapMarkers.transform);
-		_mapMarker.AddComponent<ScreenSpaceMover>().ObjectToFollow = _latestPositionObject;
+
+		var objectToFollow = CreatePositionObject();
+		_mapMarker.AddComponent<ScreenSpaceMover>().ObjectToFollow = objectToFollow;
 		_mapMarker.AddComponent<GeocommentToggler>().GeocommentInput = GeocommentInput;
+		_mapMarker.GetComponent<GeocommentToggler>().ParentObject = ParentObject;
 
 		var text = GeocommentInput.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text;
 		_mapMarker.AddComponent<CommentText>().Text = text;
-
 		_mapMarker.GetComponent<Button>().onClick.AddListener(ShowGeocomment);
 
 		RemoveButtonListeners();
-
 		GeocommentInput.gameObject.SetActive(false);
 	}
 
@@ -95,12 +87,11 @@ public class TapHandler : MonoBehaviour
 	private void ShowGeocomment()
 	{
 		_mapMarker.GetComponent<GeocommentToggler>().ShowGeocommentInput();
-		Debug.Log("marker clicked in taphandler");
 	}
 
 	public void CancelGeocomment()
 	{
-		Destroy(_latestPositionObject);
+		RemoveButtonListeners();
 		GeocommentInput.gameObject.SetActive(false);
 	}
 }

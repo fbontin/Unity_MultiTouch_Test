@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using TouchScript.Gestures;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +6,29 @@ public class GeocommentToggler : MonoBehaviour
 {
 
 	public GameObject GeocommentInput;
+	public GameObject ParentObject;
 
 	public void ShowGeocommentInput()
 	{
 		ShowText();
+		MoveMarkerToMiddle();
 		GeocommentInput.gameObject.SetActive(true);
 		SetButtonListeners();
+		Debug.Log("marker pos: " + gameObject.transform.localPosition);
+	}
+
+	private void ShowText()
+	{
+		var text = GetComponent<CommentText>().Text;
+		GeocommentInput.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text = text;
+	}
+
+	private void MoveMarkerToMiddle()
+	{
+		var screenPosition = gameObject.transform.localPosition;
+		var position = GetWorldPosition(screenPosition);
+		Debug.Log("Marker world pos: " + position + ", parent: " + ParentObject.transform.position);
+		ParentObject.transform.position -= new Vector3(position.x, 0, position.z);
 	}
 
 	private void SetButtonListeners()
@@ -30,17 +45,18 @@ public class GeocommentToggler : MonoBehaviour
 		buttons.ToList().ForEach(b => b.onClick.RemoveAllListeners());
 	}
 
-
-	private void ShowText()
+	private static Vector3 GetWorldPosition(Vector2 screenPosition)
 	{
-		var text = GetComponent<CommentText>().Text;
-		GeocommentInput.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text = text;
+		var ray = Camera.main.ScreenPointToRay(screenPosition);
+		const float height = 25.0f;
+		var distance = (height - ray.origin.y) / ray.direction.y;
+		return ray.GetPoint(distance);
 	}
 
 	public void HideGeocommentInput()
 	{
 		RemoveButtonListeners();
-		Debug.Log(GetComponent<ScreenSpaceMover>().ObjectToFollow.transform.position);
+		Debug.Log("Obj to follow: " + GetComponent<ScreenSpaceMover>().ObjectToFollow.transform.position);
 		GeocommentInput.gameObject.SetActive(false);
 	}
 

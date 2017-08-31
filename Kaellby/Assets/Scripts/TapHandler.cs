@@ -2,6 +2,7 @@
 using System.Linq;
 using TouchScript.Gestures;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TapHandler : MonoBehaviour
@@ -72,7 +73,7 @@ public class TapHandler : MonoBehaviour
 
 		var text = GeocommentInput.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text;
 		_mapMarker.AddComponent<CommentText>().Text = text;
-		_mapMarker.GetComponent<Button>().onClick.AddListener(ShowGeocomment);
+		_mapMarker.GetComponent<Button>().onClick.AddListener(_mapMarker.GetComponent<GeocommentToggler>().ShowGeocommentInput);
 
 		RemoveButtonListeners();
 		GeocommentInput.gameObject.SetActive(false);
@@ -82,11 +83,6 @@ public class TapHandler : MonoBehaviour
 	{
 		var buttons = GeocommentInput.GetComponentsInChildren<Button>();
 		buttons.ToList().ForEach(b => b.onClick.RemoveAllListeners());
-	}
-
-	private void ShowGeocomment()
-	{
-		_mapMarker.GetComponent<GeocommentToggler>().ShowGeocommentInput();
 	}
 
 	public void CancelGeocomment()

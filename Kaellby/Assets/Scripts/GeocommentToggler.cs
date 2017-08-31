@@ -14,7 +14,6 @@ public class GeocommentToggler : MonoBehaviour
 		MoveMarkerToMiddle();
 		GeocommentInput.gameObject.SetActive(true);
 		SetButtonListeners();
-		Debug.Log("marker pos: " + gameObject.transform.localPosition);
 	}
 
 	private void ShowText()
@@ -25,10 +24,20 @@ public class GeocommentToggler : MonoBehaviour
 
 	private void MoveMarkerToMiddle()
 	{
-		var screenPosition = gameObject.transform.localPosition;
+		var screenPosition = GetComponent<RectTransform>().anchoredPosition;
+		Debug.Log("rect: " + screenPosition + ", local: " + transform.localPosition);
+		
 		var position = GetWorldPosition(screenPosition);
-		Debug.Log("Marker world pos: " + position + ", parent: " + ParentObject.transform.position);
 		ParentObject.transform.position -= new Vector3(position.x, 0, position.z);
+		Debug.Log("Marker world pos: " + position + ", parent: " + ParentObject.transform.position);
+	}
+
+	private static Vector3 GetWorldPosition(Vector2 screenPosition)
+	{
+		var ray = Camera.main.ScreenPointToRay(screenPosition);
+		const float height = 25.0f;
+		var distance = (height - ray.origin.y) / ray.direction.y;
+		return ray.GetPoint(distance);
 	}
 
 	private void SetButtonListeners()
@@ -43,14 +52,6 @@ public class GeocommentToggler : MonoBehaviour
 	{
 		var buttons = GeocommentInput.GetComponentsInChildren<Button>();
 		buttons.ToList().ForEach(b => b.onClick.RemoveAllListeners());
-	}
-
-	private static Vector3 GetWorldPosition(Vector2 screenPosition)
-	{
-		var ray = Camera.main.ScreenPointToRay(screenPosition);
-		const float height = 25.0f;
-		var distance = (height - ray.origin.y) / ray.direction.y;
-		return ray.GetPoint(distance);
 	}
 
 	public void HideGeocommentInput()

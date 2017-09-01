@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public class CommentText : MonoBehaviour
+namespace Assets.Scripts
 {
-	public string Text;
+	public class CommentText : MonoBehaviour
+	{
+		public string Text;
+	}
 }

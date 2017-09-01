@@ -4,12 +4,12 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Hit;
-using TouchScript.Layers;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Core
+namespace Assets.TouchScript.Scripts.Core
 {
     /// <summary>
     /// Internal implementation of <see cref="ILayerManager"/>.

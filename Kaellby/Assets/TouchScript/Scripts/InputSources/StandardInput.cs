@@ -5,12 +5,12 @@
 #if UNITY_STANDALONE_WIN && !UNITY_EDITOR
 using System;
 #endif
-using TouchScript.InputSources.InputHandlers;
-using TouchScript.Pointers;
-using TouchScript.Utils.Attributes;
+using Assets.TouchScript.Scripts.InputSources.InputHandlers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 
-namespace TouchScript.InputSources
+namespace Assets.TouchScript.Scripts.InputSources
 {
     /// <summary>
     /// Processes standard input events (mouse, pointer, pen) on all platforms.

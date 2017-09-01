@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Core;
+using Assets.TouchScript.Scripts.Core;
 using UnityEngine;
 
-namespace TouchScript
+namespace Assets.TouchScript.Scripts
 {
     /// <summary>
     /// Facade for current instance of <see cref="IGestureManager"/>.

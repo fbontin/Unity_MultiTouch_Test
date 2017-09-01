@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TouchScript.Behaviors.Cursors.UI
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors.UI
 {
     /// <summary>
     /// Generates a texture with a circle gradient.

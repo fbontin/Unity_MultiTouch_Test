@@ -2,7 +2,7 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-namespace TouchScript
+namespace Assets.TouchScript.Scripts
 {
     /// <summary>
     /// An interface for objects which can expose some kind of debug information which can be turned on and off.

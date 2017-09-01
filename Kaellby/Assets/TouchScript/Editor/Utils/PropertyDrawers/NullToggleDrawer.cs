@@ -2,7 +2,7 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Utils.Attributes;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEditor;
 using UnityEngine;
 

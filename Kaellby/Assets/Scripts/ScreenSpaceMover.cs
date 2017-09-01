@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 
-public class ScreenSpaceMover : MonoBehaviour
+namespace Assets.Scripts
 {
-
-	public GameObject ObjectToFollow;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+	public class ScreenSpaceMover : MonoBehaviour
 	{
-		var screenPosition = Camera.main.WorldToScreenPoint(ObjectToFollow.transform.position);
-		transform.position = screenPosition;
 
-		//FIX
-		//Debug.Log("cube: " + ObjectToFollow.transform.position);
+		public GameObject ObjectToFollow;
+
+		// Use this for initialization
+		void Start () {
+		
+		}
+	
+		// Update is called once per frame
+		void Update ()
+		{
+			var screenPosition = Camera.main.WorldToScreenPoint(ObjectToFollow.transform.position);
+			transform.position = screenPosition;
+		}
 	}
 }

@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.Devices.Display
+namespace Assets.TouchScript.Scripts.Devices.Display
 {
     /// <summary>
     /// Represents a device which is used to display touch interface. Incapsulating such properties as <see cref="DPI"/>.

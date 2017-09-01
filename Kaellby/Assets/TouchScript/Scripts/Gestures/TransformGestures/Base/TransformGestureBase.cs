@@ -4,15 +4,15 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
 #if TOUCHSCRIPT_DEBUG
 using TouchScript.Debugging.GL;
 #endif
 
-namespace TouchScript.Gestures.TransformGestures.Base
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures.Base
 {
     /// <summary>
     /// Abstract base class for Transform Gestures.

@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Gestures;
 using UnityEngine;
-using TouchScript.Gestures;
 
-namespace TouchScript.Examples.Photos
+namespace Assets.TouchScript.Examples.Photos.Scripts
 {
     /// <exclude />
     public class Container : MonoBehaviour

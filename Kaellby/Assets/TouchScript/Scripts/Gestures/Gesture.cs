@@ -5,15 +5,15 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using TouchScript.Hit;
-using TouchScript.Utils;
-using TouchScript.Utils.Attributes;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Core;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
-using TouchScript.Core;
 
-namespace TouchScript.Gestures
+namespace Assets.TouchScript.Scripts.Gestures
 {
     /// <summary>
     /// Base class for all gestures.

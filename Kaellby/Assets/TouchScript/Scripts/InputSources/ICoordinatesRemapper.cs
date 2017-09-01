@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.InputSources
+namespace Assets.TouchScript.Scripts.InputSources
 {
     /// <summary>
     /// An object which changes pointer coordinates coming from an input source.

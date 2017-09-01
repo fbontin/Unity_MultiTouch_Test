@@ -2,16 +2,16 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Hit;
-using TouchScript.InputSources;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.InputSources;
 using UnityEngine;
 
-namespace TouchScript.Pointers
+namespace Assets.TouchScript.Scripts.Pointers
 {
     /// <summary>
     /// Fake pointer.
     /// </summary>
-    /// <seealso cref="TouchScript.Pointers.Pointer" />
+    /// <seealso cref="Pointer" />
     public class FakePointer : IPointer
     {
         #region Public properties

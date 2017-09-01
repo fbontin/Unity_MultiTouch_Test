@@ -3,11 +3,11 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Clusters
+namespace Assets.TouchScript.Scripts.Clusters
 {
     /// <summary>
     /// Represents a pool of points separated into two clusters.

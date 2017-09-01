@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.InputSources;
+using Assets.TouchScript.Scripts.InputSources;
 using UnityEngine;
 
-namespace TouchScript.Pointers
+namespace Assets.TouchScript.Scripts.Pointers
 {
     /// <summary>
     /// A pointer of type <see cref="Pointer.PointerType.Mouse"/>.

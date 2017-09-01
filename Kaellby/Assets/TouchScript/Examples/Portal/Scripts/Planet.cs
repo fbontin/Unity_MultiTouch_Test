@@ -2,11 +2,11 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
 using UnityEngine;
-using TouchScript.Gestures;
-using TouchScript.Gestures.TransformGestures;
 
-namespace TouchScript.Examples.Portal
+namespace Assets.TouchScript.Examples.Portal.Scripts
 {
     /// <exclude />
     public class Planet : MonoBehaviour

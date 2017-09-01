@@ -3,10 +3,11 @@
  */
 
 using System;
-using TouchScript.Gestures;
+using Assets.TouchScript.Scripts;
+using Assets.TouchScript.Scripts.Gestures;
 using UnityEngine;
 
-namespace TouchScript.Examples.Portal
+namespace Assets.TouchScript.Examples.Portal.Scripts
 {
     /// <exclude />
     public class Spawner : MonoBehaviour

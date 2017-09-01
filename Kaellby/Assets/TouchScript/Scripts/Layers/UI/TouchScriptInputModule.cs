@@ -5,15 +5,15 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using TouchScript.Hit;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using Pointer = TouchScript.Pointers.Pointer;
 using UnityEngine.Profiling;
+using UnityEngine.UI;
+using Pointer = Assets.TouchScript.Scripts.Pointers.Pointer;
 
-namespace TouchScript.Layers.UI
+namespace Assets.TouchScript.Scripts.Layers.UI
 {
     /// <summary>
     /// An implementation of a Unity UI Input Module which lets TouchScript interact with the UI and EventSystem.

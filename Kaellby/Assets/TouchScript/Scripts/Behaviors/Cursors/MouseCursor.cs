@@ -3,12 +3,12 @@
  */
 
 using System.Text;
-using TouchScript.Behaviors.Cursors.UI;
-using TouchScript.Pointers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Behaviors.Cursors.UI;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Behaviors.Cursors
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors
 {
     /// <summary>
     /// Cursor for mouse pointers.

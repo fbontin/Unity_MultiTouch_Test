@@ -39,7 +39,6 @@ namespace Assets.Scripts
 			go.GetComponent<TappedHandler>().MainCamera = MainCamera;
 			go.GetComponent<TappedHandler>().MainUiCanvas = MainUiCanvas;
 			
-
 			SetPosition(go);
 			ChangeTouchFocus();
 		}

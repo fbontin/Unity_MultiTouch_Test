@@ -2,7 +2,7 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.InputSources;
+using Assets.TouchScript.Scripts.InputSources;
 using UnityEditor;
 using UnityEngine;
 using TouchScript.Editor.EditorUI;

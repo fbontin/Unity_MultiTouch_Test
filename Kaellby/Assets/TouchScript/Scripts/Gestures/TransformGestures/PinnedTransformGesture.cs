@@ -3,18 +3,16 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Gestures.TransformGestures.Base;
-using TouchScript.Layers;
-using TouchScript.Utils.Geom;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures.Base;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
+using UnityEngine;
 using UnityEngine.Profiling;
-
 #if TOUCHSCRIPT_DEBUG
 using TouchScript.Debugging.GL;
 #endif
-using UnityEngine;
 
-namespace TouchScript.Gestures.TransformGestures
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures
 {
     /// <summary>
     /// Recognizes a transform gesture around center of the object, i.e. one finger rotation, scaling or a combination of these.

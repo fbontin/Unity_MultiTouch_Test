@@ -2,10 +2,9 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Gestures;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
 
-namespace TouchScript
+namespace Assets.TouchScript.Scripts.Gestures
 {
     /// <summary>
     /// <para>A delegate which can be set to <see cref="Gesture.Delegate"/> and control what this gesture can or can not do.</para>

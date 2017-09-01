@@ -5,7 +5,7 @@
 using System.Text;
 using UnityEngine;
 
-namespace TouchScript.Utils
+namespace Assets.TouchScript.Scripts.Utils
 {
     /// <summary>
     /// Utility methods to work with Transforms.

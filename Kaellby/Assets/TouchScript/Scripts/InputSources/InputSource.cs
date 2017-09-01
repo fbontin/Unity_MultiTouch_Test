@@ -3,11 +3,11 @@
  */
 
 using System;
-using TouchScript.Core;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Core;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.InputSources
+namespace Assets.TouchScript.Scripts.InputSources
 {
 
     #region Consts

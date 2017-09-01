@@ -3,18 +3,18 @@
  */
 
 using System.Text;
-using TouchScript.Pointers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TouchScript.Behaviors.Cursors
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors
 {
     /// <summary>
     /// Abstract class for pointer cursors with text.
     /// </summary>
     /// <typeparam name="T">Pointer type.</typeparam>
-    /// <seealso cref="TouchScript.Behaviors.Cursors.PointerCursor" />
+    /// <seealso cref="PointerCursor" />
     public abstract class TextPointerCursor<T> : PointerCursor where T : IPointer
     {
         #region Public properties

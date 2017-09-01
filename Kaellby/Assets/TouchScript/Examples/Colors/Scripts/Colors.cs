@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-namespace TouchScript.Examples.Colors
+namespace Assets.TouchScript.Examples.Colors.Scripts
 {
     /// <exclude />
     public class Colors : MonoBehaviour

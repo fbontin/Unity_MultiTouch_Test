@@ -1,14 +1,17 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-/// <exclude />
-public class ShowMe : MonoBehaviour 
+namespace Assets.TouchScript.Examples._misc.Scripts
 {
-	IEnumerator Start () 
+	/// <exclude />
+	public class ShowMe : MonoBehaviour 
 	{
-		var canvas = GetComponent<Canvas>();
-		canvas.enabled = false;
-		yield return new WaitForSeconds(.5f);
-		canvas.enabled = true;
+		IEnumerator Start () 
+		{
+			var canvas = GetComponent<Canvas>();
+			canvas.enabled = false;
+			yield return new WaitForSeconds(.5f);
+			canvas.enabled = true;
+		}
 	}
 }

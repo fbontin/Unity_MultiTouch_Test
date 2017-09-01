@@ -4,14 +4,15 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using TouchScript.Devices.Display;
 using TouchScript.Editor.EditorUI;
-using TouchScript.Layers;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using System.Reflection;
+using Assets.TouchScript.Scripts;
+using Assets.TouchScript.Scripts.Devices.Display;
+using Assets.TouchScript.Scripts.Layers;
 
 namespace TouchScript.Editor
 {

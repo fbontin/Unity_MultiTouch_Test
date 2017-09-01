@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Utils.Geom;
+using Assets.TouchScript.Scripts.Utils.Geom;
 using UnityEngine;
 
-namespace TouchScript.Layers
+namespace Assets.TouchScript.Scripts.Layers
 {
     /// <summary>
     /// <see cref="TouchLayer"/> specific projection parameters. Used by layers to project pointers in the world and world coordinates onto layers.

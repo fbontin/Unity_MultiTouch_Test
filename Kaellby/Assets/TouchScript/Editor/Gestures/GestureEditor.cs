@@ -4,11 +4,11 @@
 
 using System;
 using TouchScript.Editor.EditorUI;
-using TouchScript.Gestures;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using System.Reflection;
+using Assets.TouchScript.Scripts.Gestures;
 
 namespace TouchScript.Editor.Gestures
 {

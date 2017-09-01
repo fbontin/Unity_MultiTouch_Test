@@ -3,11 +3,11 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Gestures.TransformGestures.Clustered
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures.Clustered
 {
     /// <summary>
     /// ScreenTransformGesture which splits all pointers into 2 clusters and works with them.

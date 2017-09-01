@@ -3,9 +3,9 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Layers;
-using TouchScript.Pointers;
-using TouchScript.Utils.Geom;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils.Geom;
 using UnityEngine;
 
 #if TOUCHSCRIPT_DEBUG
@@ -13,7 +13,7 @@ using System.Collections;
 using TouchScript.Debugging.GL;
 #endif
 
-namespace TouchScript.Gestures.TransformGestures.Base
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures.Base
 {
     /// <summary>
     /// Abstract base class for Pinned Transform Gestures.

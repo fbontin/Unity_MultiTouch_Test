@@ -12,7 +12,7 @@ using UnityEngine.Events;
 using UnityEngine;
 #endif
 
-namespace TouchScript.Utils
+namespace Assets.TouchScript.Scripts.Utils
 {
     /// <exclude />
     public class ObjectPool<T> where T : class

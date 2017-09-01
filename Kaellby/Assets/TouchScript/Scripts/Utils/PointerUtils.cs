@@ -3,11 +3,11 @@
  */
 
 using System.Text;
-using TouchScript.Hit;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Utils
+namespace Assets.TouchScript.Scripts.Utils
 {
     /// <summary>
     /// Utility methods to work with Pointers.

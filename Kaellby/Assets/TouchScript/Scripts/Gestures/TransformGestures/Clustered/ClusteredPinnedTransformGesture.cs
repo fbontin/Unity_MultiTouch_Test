@@ -3,11 +3,11 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Gestures.TransformGestures.Clustered
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures.Clustered
 {
     /// <summary>
     /// PinnedTransformGesture which works with centroid of all pointers instead of with just the first one.

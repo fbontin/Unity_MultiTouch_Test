@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Layers;
 using UnityEngine;
-using TouchScript.Layers;
 
-namespace TouchScript.Examples.Cube 
+namespace Assets.TouchScript.Examples.Cube.Scripts 
 {
     /// <exclude />
     public class Init : MonoBehaviour 

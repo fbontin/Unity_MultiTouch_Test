@@ -3,11 +3,11 @@
  */
 
 using System;
+using Assets.TouchScript.Scripts.Behaviors;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
 using UnityEngine;
-using TouchScript.Behaviors;
-using TouchScript.Gestures.TransformGestures;
 
-namespace TouchScript.Examples
+namespace Assets.TouchScript.Examples._misc.Scripts
 {
     /// <summary>
     /// This component controlls the movement of a Checker on the Board.

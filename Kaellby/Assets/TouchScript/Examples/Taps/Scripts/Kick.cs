@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Gestures;
 using UnityEngine;
-using TouchScript.Gestures;
 
-namespace TouchScript.Examples.Tap
+namespace Assets.TouchScript.Examples.Taps.Scripts
 {
     /// <exclude />
     public class Kick : MonoBehaviour
@@ -15,12 +15,12 @@ namespace TouchScript.Examples.Tap
 
         private TapGesture gesture;
         private Rigidbody rb;
-		private Camera activeCamera;
+		private UnityEngine.Camera activeCamera;
 
         private void OnEnable()
         {
             rb = GetComponent<Rigidbody>();
-			activeCamera = GameObject.Find("Scene Camera").GetComponent<Camera>();
+			activeCamera = GameObject.Find("Scene Camera").GetComponent<UnityEngine.Camera>();
             gesture = GetComponent<TapGesture>();
             gesture.Tapped += tappedHandler;
         }

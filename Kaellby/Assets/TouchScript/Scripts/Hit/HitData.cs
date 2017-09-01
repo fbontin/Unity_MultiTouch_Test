@@ -3,10 +3,10 @@
  */
 
 using System;
-using TouchScript.Layers;
+using Assets.TouchScript.Scripts.Layers;
 using UnityEngine;
 
-namespace TouchScript.Hit
+namespace Assets.TouchScript.Scripts.Hit
 {
     /// <summary>
     /// An object representing a point hit by a pointer in 3D, 2D or UI space.

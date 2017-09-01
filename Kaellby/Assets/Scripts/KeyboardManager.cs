@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class KeyboardManager : MonoBehaviour, ISelectHandler
+namespace Assets.Scripts
 {
-	public void OnSelect(BaseEventData eventData)
+	public class KeyboardManager : MonoBehaviour, ISelectHandler
 	{
-		System.Diagnostics.Process.Start("tabtip.exe");
+		public void OnSelect(BaseEventData eventData)
+		{
+			System.Diagnostics.Process.Start("tabtip.exe");
+		}
 	}
 }

@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.Behaviors.Cursors.UI
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors.UI
 {
     /// <summary>
     /// A helper class to turn on and off <see cref="CanvasRenderer"/> without causing allocations.

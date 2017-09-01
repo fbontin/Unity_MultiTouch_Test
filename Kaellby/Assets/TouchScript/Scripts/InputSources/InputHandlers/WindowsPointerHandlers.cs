@@ -9,12 +9,12 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using TouchScript.Pointers;
-using TouchScript.Utils;
-using TouchScript.Utils.Platform;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using Assets.TouchScript.Scripts.Utils.Platform;
 using UnityEngine;
 
-namespace TouchScript.InputSources.InputHandlers
+namespace Assets.TouchScript.Scripts.InputSources.InputHandlers
 {
     /// <summary>
     /// Windows 8 pointer handling implementation which can be embedded to other (input) classes. Uses WindowsTouch.dll to query native touches with WM_TOUCH or WM_POINTER APIs.

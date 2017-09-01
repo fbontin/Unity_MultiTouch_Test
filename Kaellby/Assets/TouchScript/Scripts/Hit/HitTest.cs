@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Hit
+namespace Assets.TouchScript.Scripts.Hit
 {
 
     /// <summary>

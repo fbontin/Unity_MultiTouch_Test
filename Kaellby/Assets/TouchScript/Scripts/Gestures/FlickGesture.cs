@@ -4,12 +4,12 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.Gestures
+namespace Assets.TouchScript.Scripts.Gestures
 {
     /// <summary>
     /// Recognizes fast movement before releasing pointers. Doesn't care how much time pointers were on surface and how much they moved.

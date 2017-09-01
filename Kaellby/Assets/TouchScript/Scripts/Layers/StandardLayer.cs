@@ -3,22 +3,22 @@
  */
 
 using System;
-using TouchScript.Hit;
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using TouchScript.Layers.UI;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Layers.UI;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils.Attributes;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.Collections;
-using TouchScript.Utils.Attributes;
 
-namespace TouchScript.Layers
+namespace Assets.TouchScript.Scripts.Layers
 {
     /// <summary>
     /// A layer which combines all types of hit recognition into one: UI (Screen Space and World), 3D and 2D.
     /// </summary>
-    /// <seealso cref="TouchScript.Layers.TouchLayer" />
+    /// <seealso cref="TouchLayer" />
     [AddComponentMenu("TouchScript/Layers/Standard Layer")]
     [HelpURL("http://touchscript.github.io/docs/html/T_TouchScript_Layers_StandardLayer.htm")]
     public class StandardLayer : TouchLayer

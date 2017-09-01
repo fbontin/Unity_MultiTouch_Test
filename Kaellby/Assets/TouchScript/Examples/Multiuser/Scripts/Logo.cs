@@ -3,11 +3,11 @@
  */
 
 using System;
-using TouchScript.Gestures;
+using Assets.TouchScript.Scripts.Gestures;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TouchScript.Examples.Multiuser
+namespace Assets.TouchScript.Examples.Multiuser.Scripts
 {
     /// <exclude />
     public class Logo : MonoBehaviour

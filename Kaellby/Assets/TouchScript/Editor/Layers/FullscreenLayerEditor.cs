@@ -2,8 +2,8 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Layers;
 using TouchScript.Editor.EditorUI;
-using TouchScript.Layers;
 using UnityEditor;
 using UnityEngine;
 

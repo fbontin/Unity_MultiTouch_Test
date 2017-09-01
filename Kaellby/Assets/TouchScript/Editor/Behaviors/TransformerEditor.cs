@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Behaviors;
 using UnityEditor;
 using UnityEngine;
 using System.Reflection;
+using Assets.TouchScript.Scripts.Behaviors;
 using TouchScript.Editor.EditorUI;
 
 namespace TouchScript.Editor.Behaviors

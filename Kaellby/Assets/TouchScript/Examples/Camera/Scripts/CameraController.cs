@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
 using UnityEngine;
-using TouchScript.Gestures.TransformGestures;
 
-namespace TouchScript.Examples.CameraControl
+namespace Assets.TouchScript.Examples.Camera.Scripts
 {
     /// <exclude />
     public class CameraController : MonoBehaviour

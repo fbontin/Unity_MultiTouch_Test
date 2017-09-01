@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.Examples.RawInput
+namespace Assets.TouchScript.Examples.RawInput.Scripts
 {
     /// <exclude />
     public class Ball : MonoBehaviour

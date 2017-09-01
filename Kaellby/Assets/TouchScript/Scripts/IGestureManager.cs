@@ -2,7 +2,9 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-namespace TouchScript
+using Assets.TouchScript.Scripts.Gestures;
+
+namespace Assets.TouchScript.Scripts
 {
     /// <summary>
     /// Core manager which controls gesture recognition in hierarchy.

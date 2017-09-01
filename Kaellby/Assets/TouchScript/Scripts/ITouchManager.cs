@@ -4,12 +4,12 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Devices.Display;
-using TouchScript.InputSources;
-using TouchScript.Layers;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Devices.Display;
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
 
-namespace TouchScript
+namespace Assets.TouchScript.Scripts
 {
     /// <summary>
     /// <para>Core manager of all pointer input in <b>TouchScript</b>. It is responsible for assigning unique pointer ids and keeping the list of active pointers. Controls pointer frames and dispatches pointer events.</para>

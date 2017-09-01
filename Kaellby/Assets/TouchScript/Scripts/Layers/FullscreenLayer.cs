@@ -2,12 +2,11 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using System.Collections.Generic;
-using TouchScript.Hit;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Layers
+namespace Assets.TouchScript.Scripts.Layers
 {
     /// <summary>
     /// Layer which gets all input from a camera. Should be used instead of a background object getting all the pointers which come through.

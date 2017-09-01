@@ -3,13 +3,13 @@
  */
 
 using System;
-using TouchScript.Gestures;
-using TouchScript.Gestures.TransformGestures;
-using TouchScript.Gestures.TransformGestures.Base;
-using TouchScript.Utils.Attributes;
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures.Base;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 
-namespace TouchScript.Behaviors
+namespace Assets.TouchScript.Scripts.Behaviors
 {
     /// <summary>
     /// Component which transforms an object according to events from transform gestures: <see cref="TransformGesture"/>, <see cref="ScreenTransformGesture"/>, <see cref="PinnedTransformGesture"/> and others.

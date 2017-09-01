@@ -2,19 +2,20 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using UnityEngine;
-using TouchScript.Layers;
-using System.Collections;
-#if UNITY_EDITOR
-using UnityEditor;
 using System;
+using System.Collections;
+using Assets.TouchScript.Scripts;
+using Assets.TouchScript.Scripts.Layers;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
 #endif
 #if UNITY_5_3_OR_NEWER
-using UnityEngine.SceneManagement;
 
 #endif
 
-namespace TouchScript.Examples
+namespace Assets.TouchScript.Examples._misc.Scripts
 {
     /// <exclude />
     public class Runner : MonoBehaviour

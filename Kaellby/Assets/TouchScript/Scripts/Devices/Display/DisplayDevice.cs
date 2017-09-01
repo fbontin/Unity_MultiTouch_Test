@@ -7,7 +7,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace TouchScript.Devices.Display
+namespace Assets.TouchScript.Scripts.Devices.Display
 {
     /// <summary>
     /// A simple display device which inherits from <see cref="ScriptableObject"/> and can be saved in Unity assets.

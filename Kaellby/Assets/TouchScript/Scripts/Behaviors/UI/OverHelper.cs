@@ -4,11 +4,11 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Pointers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Behaviors.UI
+namespace Assets.TouchScript.Scripts.Behaviors.UI
 {
 
     /// <summary>

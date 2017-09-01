@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.Examples.Portal
+namespace Assets.TouchScript.Examples.Portal.Scripts
 {
     /// <exclude />
     public class Vortex : MonoBehaviour

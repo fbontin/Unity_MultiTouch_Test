@@ -3,11 +3,11 @@
  */
 
 using System;
+using Assets.TouchScript.Scripts.Gestures;
 using UnityEngine;
-using TouchScript.Gestures;
 using Random = UnityEngine.Random;
 
-namespace TouchScript.Examples.Tap
+namespace Assets.TouchScript.Examples.Taps.Scripts
 {
     /// <exclude />
     public class Break : MonoBehaviour

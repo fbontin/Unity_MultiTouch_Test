@@ -4,14 +4,14 @@
 
 using System;
 using System.Text;
-using TouchScript.Core;
-using TouchScript.Hit;
-using TouchScript.InputSources;
-using TouchScript.Layers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Core;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 
-namespace TouchScript.Pointers
+namespace Assets.TouchScript.Scripts.Pointers
 {
     /// <summary>
     /// <para>Representation of a pointer (touch, mouse) within TouchScript.</para>

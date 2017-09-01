@@ -4,16 +4,17 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Core;
-using TouchScript.Devices.Display;
-using TouchScript.Layers;
-using TouchScript.Pointers;
-using TouchScript.Utils.Attributes;
+using Assets.TouchScript.Scripts.Core;
+using Assets.TouchScript.Scripts.Devices.Display;
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
-namespace TouchScript
+namespace Assets.TouchScript.Scripts
 {
     /// <summary>
     /// A facade object to configure and hold parameters for an instance of <see cref="ITouchManager"/>. Contains constants used throughout the library.
@@ -264,7 +265,7 @@ namespace TouchScript
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether a <see cref="TouchScript.InputSources.StandardInput"/> should be created in scene if no inputs present.
+        /// Gets or sets a value indicating whether a <see cref="StandardInput"/> should be created in scene if no inputs present.
         /// </summary>
         /// <value> <c>true</c> if StandardInput should be created; otherwise, <c>false</c>. </value>
         /// <remarks>This is usually a desired behavior but sometimes you would want to turn this off.</remarks>

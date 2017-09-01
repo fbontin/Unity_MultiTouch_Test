@@ -7,7 +7,7 @@ using TouchScript.Utils.Attributes;
 #endif
 using UnityEngine;
 
-namespace TouchScript.Core
+namespace Assets.TouchScript.Scripts.Core
 {
     /// <summary>
     /// A debuggable component. When built with TOUCHSCRIPT_DEBUG define has a checkbox to turn debug information on and off.

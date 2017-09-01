@@ -2,9 +2,9 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
 
-namespace TouchScript.Layers
+namespace Assets.TouchScript.Scripts.Layers
 {
     /// <summary>
     /// <para>A delegate which can be set to <see cref="TouchLayer.Delegate"/> and control what this layer can or can not do.</para>

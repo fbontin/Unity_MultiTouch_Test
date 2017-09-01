@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 
-/// <exclude />
-public class ExamplesList : MonoBehaviour 
+namespace Assets.TouchScript.Examples._misc.Scripts
 {
-
-	public RectTransform Content;
-
-	void Start () 
+	/// <exclude />
+	public class ExamplesList : MonoBehaviour 
 	{
-		gameObject.SetActive(false);
-	}
 
-	public void ShowHide()
-	{
-		gameObject.SetActive(!gameObject.activeSelf);
-		Content.localPosition = Vector3.zero;
-	}
+		public RectTransform Content;
 
+		void Start () 
+		{
+			gameObject.SetActive(false);
+		}
+
+		public void ShowHide()
+		{
+			gameObject.SetActive(!gameObject.activeSelf);
+			Content.localPosition = Vector3.zero;
+		}
+
+	}
 }

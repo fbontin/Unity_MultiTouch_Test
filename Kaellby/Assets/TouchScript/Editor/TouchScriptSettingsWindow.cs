@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using Assets.TouchScript.Scripts;
 
 namespace TouchScript.Editor
 {

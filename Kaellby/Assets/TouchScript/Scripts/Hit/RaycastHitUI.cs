@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace TouchScript.Hit
+namespace Assets.TouchScript.Scripts.Hit
 {
     /// <exclude />
     public struct RaycastHitUI

@@ -3,14 +3,14 @@
  */
 
 using System;
-using TouchScript.Hit;
-using TouchScript.Utils;
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using UnityEngine;
 
-namespace TouchScript.Layers
+namespace Assets.TouchScript.Scripts.Layers
 {
     /// <summary>
     /// Base class for all pointer layers. Used to check if some object is hit by a pointer.

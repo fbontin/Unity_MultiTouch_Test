@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-namespace TouchScript.Examples
+namespace Assets.TouchScript.Examples._misc.Scripts
 {
     /// <exclude />
     public class KillMe : MonoBehaviour

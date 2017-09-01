@@ -3,12 +3,12 @@
  */
 
 using System.Text.RegularExpressions;
-#if UNITY_STANDALONE_WIN
-using TouchScript.Utils.Platform;
-#endif
+using Assets.TouchScript.Scripts.Utils.Platform;
 using UnityEngine;
+#if UNITY_STANDALONE_WIN
+#endif
 
-namespace TouchScript.Devices.Display
+namespace Assets.TouchScript.Scripts.Devices.Display
 {
     /// <summary>
     /// Display device which tries to guess current DPI if it's not set by platform.

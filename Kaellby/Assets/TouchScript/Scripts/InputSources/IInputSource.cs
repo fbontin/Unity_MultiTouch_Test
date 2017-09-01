@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Core;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Core;
+using Assets.TouchScript.Scripts.Pointers;
 
-namespace TouchScript.InputSources
+namespace Assets.TouchScript.Scripts.InputSources
 {
     /// <summary>
     /// An object which represents an input source.

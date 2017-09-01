@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace TouchScript.Utils.Attributes
+namespace Assets.TouchScript.Scripts.Utils.Attributes
 {
     /// <summary>
     /// <para>An attribute to use with NullToggle item drawer.</para>

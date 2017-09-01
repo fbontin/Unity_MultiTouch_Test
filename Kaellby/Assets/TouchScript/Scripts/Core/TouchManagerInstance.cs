@@ -2,27 +2,27 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TouchScript.Devices.Display;
-using TouchScript.Hit;
-using TouchScript.InputSources;
-using TouchScript.Layers;
-using TouchScript.Utils;
-using TouchScript.Pointers;
-using UnityEngine;
-using UnityEngine.Profiling;
-using TouchScript.Core;
 #if TOUCHSCRIPT_DEBUG
 using TouchScript.Debugging.GL;
 using TouchScript.Debugging.Loggers;
 #endif
-#if UNITY_5_4_OR_NEWER
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Assets.TouchScript.Scripts.Devices.Display;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.SceneManagement;
+#if UNITY_5_4_OR_NEWER
+
 #endif
 
-namespace TouchScript.Core
+namespace Assets.TouchScript.Scripts.Core
 {
     /// <summary>
     /// Default implementation of <see cref="ITouchManager"/>.

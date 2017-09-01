@@ -3,10 +3,10 @@
  */
 
 using System.Text;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Behaviors.Cursors
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors
 {
     /// <summary>
     /// Cursor for touch pointers.

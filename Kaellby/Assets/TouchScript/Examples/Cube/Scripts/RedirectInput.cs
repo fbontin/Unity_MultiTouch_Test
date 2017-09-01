@@ -2,15 +2,15 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using UnityEngine;
 using System.Collections.Generic;
-using TouchScript.Gestures;
-using TouchScript.Hit;
-using TouchScript.InputSources;
-using TouchScript.Pointers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Hit;
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using UnityEngine;
 
-namespace TouchScript.Examples.Cube
+namespace Assets.TouchScript.Examples.Cube.Scripts
 {
     /// <exclude />
     public class RedirectInput : InputSource

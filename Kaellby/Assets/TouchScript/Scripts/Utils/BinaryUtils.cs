@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TouchScript.Utils
+namespace Assets.TouchScript.Scripts.Utils
 {
     /// <summary>
     /// Utility methods to deal with binary data.

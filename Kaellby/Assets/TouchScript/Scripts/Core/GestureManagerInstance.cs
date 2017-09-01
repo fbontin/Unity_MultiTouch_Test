@@ -4,13 +4,13 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Gestures;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.Core
+namespace Assets.TouchScript.Scripts.Core
 {
     /// <summary>
     /// Internal implementation of <see cref="IGestureManager"/>.

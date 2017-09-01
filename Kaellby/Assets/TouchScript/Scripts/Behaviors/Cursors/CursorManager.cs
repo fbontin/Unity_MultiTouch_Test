@@ -3,13 +3,13 @@
  */
 
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
-using TouchScript.Utils.Attributes;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.Behaviors.Cursors
+namespace Assets.TouchScript.Scripts.Behaviors.Cursors
 {
     /// <summary>
     /// <para>Pointer visualizer which shows pointer circles with debug text using Unity UI.</para>

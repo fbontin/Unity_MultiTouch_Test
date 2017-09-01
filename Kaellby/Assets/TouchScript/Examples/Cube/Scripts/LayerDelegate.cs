@@ -2,12 +2,12 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
+using Assets.TouchScript.Scripts.InputSources;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
-using TouchScript.Layers;
-using TouchScript.Pointers;
-using TouchScript.InputSources;
 
-namespace TouchScript.Examples.Cube
+namespace Assets.TouchScript.Examples.Cube.Scripts
 {
     /// <exclude />
     public class LayerDelegate : MonoBehaviour, ILayerDelegate

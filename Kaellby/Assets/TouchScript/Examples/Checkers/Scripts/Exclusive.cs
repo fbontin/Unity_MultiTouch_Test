@@ -2,12 +2,13 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Gestures;
-using TouchScript.Gestures.TransformGestures;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts;
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Examples.Checkers
+namespace Assets.TouchScript.Examples.Checkers.Scripts
 {
     /// <exclude />
     public class Exclusive : MonoBehaviour, IGestureDelegate

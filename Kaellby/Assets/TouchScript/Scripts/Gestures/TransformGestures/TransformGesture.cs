@@ -4,18 +4,17 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Gestures.TransformGestures.Base;
-using TouchScript.Layers;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures.Base;
+using Assets.TouchScript.Scripts.Layers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using UnityEngine;
 using UnityEngine.Profiling;
-
 #if TOUCHSCRIPT_DEBUG
 using TouchScript.Debugging.GL;
 #endif
-using UnityEngine;
 
-namespace TouchScript.Gestures.TransformGestures
+namespace Assets.TouchScript.Scripts.Gestures.TransformGestures
 {
     /// <summary>
     /// Recognizes a transform gesture, i.e. translation, rotation, scaling or a combination of these.

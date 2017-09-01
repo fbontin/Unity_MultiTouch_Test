@@ -2,7 +2,7 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Behaviors.Cursors;
+using Assets.TouchScript.Scripts.Behaviors.Cursors;
 using UnityEditor;
 using UnityEngine;
 using TouchScript.Editor.EditorUI;

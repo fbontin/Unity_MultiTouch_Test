@@ -8,7 +8,7 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace TouchScript.Utils.Platform
+namespace Assets.TouchScript.Scripts.Utils.Platform
 {
     /// <summary>
     /// Utility methods on Windows.

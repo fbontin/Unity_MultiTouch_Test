@@ -4,13 +4,13 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Utils.Attributes;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
+using Assets.TouchScript.Scripts.Utils.Attributes;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.Gestures
+namespace Assets.TouchScript.Scripts.Gestures
 {
     /// <summary>
     /// Recognizes when last pointer is released from target. Works with any gesture unless a Delegate is set. 

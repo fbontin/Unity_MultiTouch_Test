@@ -2,10 +2,10 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Behaviors.Cursors;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Behaviors.Cursors;
+using Assets.TouchScript.Scripts.Pointers;
 
-namespace TouchScript.Examples.Cube 
+namespace Assets.TouchScript.Examples.Cube.Scripts 
 {
     /// <exclude />
     public class CustomPointerProxy : PointerCursor

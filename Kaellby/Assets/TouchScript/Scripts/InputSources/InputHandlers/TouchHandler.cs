@@ -5,12 +5,12 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Pointers;
-using TouchScript.Utils;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.InputSources.InputHandlers
+namespace Assets.TouchScript.Scripts.InputSources.InputHandlers
 {
     /// <summary>
     /// Unity touch handling implementation which can be embedded and controlled from other (input) classes.

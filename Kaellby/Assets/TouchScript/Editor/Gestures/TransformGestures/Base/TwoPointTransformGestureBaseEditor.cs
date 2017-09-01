@@ -2,7 +2,7 @@
  * @author Valentin Simonov / http://va.lent.in/
  */
 
-using TouchScript.Gestures.TransformGestures;
+using Assets.TouchScript.Scripts.Gestures.TransformGestures;
 using UnityEditor;
 using UnityEngine;
 

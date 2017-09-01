@@ -4,12 +4,12 @@
 
 using System;
 using System.Collections.Generic;
-using TouchScript.Utils;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
+using Assets.TouchScript.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace TouchScript.Gestures
+namespace Assets.TouchScript.Scripts.Gestures
 {
     /// <summary>
     /// Converts Pointer events for target object into separate events to be used somewhere else.

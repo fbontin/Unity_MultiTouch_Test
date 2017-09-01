@@ -4,10 +4,10 @@
 
 using System.Collections.Generic;
 using System.Text;
-using TouchScript.Pointers;
+using Assets.TouchScript.Scripts.Pointers;
 using UnityEngine;
 
-namespace TouchScript.Utils
+namespace Assets.TouchScript.Scripts.Utils
 {
     /// <summary>
     /// Utils to manipulate clusters of points.

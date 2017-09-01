@@ -3,11 +3,11 @@
  */
 
 using System;
-using TouchScript.Gestures;
-using TouchScript.Hit;
+using Assets.TouchScript.Scripts.Gestures;
+using Assets.TouchScript.Scripts.Hit;
 using UnityEngine;
 
-namespace TouchScript.Examples.Tap
+namespace Assets.TouchScript.Examples.Taps.Scripts
 {
     /// <exclude />
     public class Spawn : MonoBehaviour

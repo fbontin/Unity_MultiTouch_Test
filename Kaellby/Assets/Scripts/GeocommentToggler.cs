@@ -6,7 +6,6 @@ namespace Assets.Scripts
 {
 	public class GeocommentToggler : MonoBehaviour
 	{
-
 		public GameObject GeocommentInput;
 		public GameObject ParentObject;
 

@@ -15,11 +15,7 @@ namespace Assets.Scripts
 		// Use this for initialization
 		void Start () 
 		{
-			group = new CullingGroup();
-			if (myCamera)
-				group.targetCamera = myCamera.GetComponent<Camera>();
-			else
-				group.targetCamera = Camera.main;
+			group = new CullingGroup {targetCamera = myCamera ? myCamera.GetComponent<Camera>() : Camera.main};
 
 			sphereRadius = Mathf.Sqrt(2.0f)*delta/2.0f;
 			midPos = new Vector3(delta/2.0f, 0f, delta/2.0f);

@@ -20,8 +20,6 @@ namespace Assets.Scripts
 		private static void SetPosition(GameObject go)
 		{
 			var tapPosition = FindTapPosition();
-
-			//var distance = Vector3.Distance(Camera.main.transform.position, Plane.transform.position);
 			var ray = Camera.main.ScreenPointToRay(new Vector3(tapPosition.x, tapPosition.y));
 
 			var plane = new Plane(Vector3.up, Vector3.zero);

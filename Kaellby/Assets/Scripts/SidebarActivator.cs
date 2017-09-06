@@ -1,17 +1,19 @@
 ﻿using Assets.TouchScript.Scripts;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 
-public class SidebarActivator : MonoBehaviour
+namespace Assets.Scripts
 {
-	public GameObject ScrollView;
-
-	void Update()
+	public class SidebarActivator : MonoBehaviour
 	{
-		var tm = TouchManager.Instance;
-		if (tm.PressedPointersCount < 1 && !ScrollView.activeInHierarchy)
+		public GameObject ScrollView;
+
+		void Update()
 		{
-			ScrollView.SetActive(true);
+			var tm = TouchManager.Instance;
+			if (tm.PressedPointersCount < 1 && !ScrollView.activeInHierarchy)
+			{
+				ScrollView.SetActive(true);
+			}
 		}
 	}
 }

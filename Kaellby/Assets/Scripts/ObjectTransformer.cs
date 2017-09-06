@@ -71,12 +71,7 @@ namespace Assets.Scripts
 			if (TransformGesture.NumPointers >= 2)
 			{
 				var medianPosition = GetMedianPosition();
-
-				Debug.Log("Begin rotation around screen position: " + medianPosition);
-
 				var rotationCenter = GetRotationCenter(medianPosition);
-
-				//GrandParent = new GameObject("GrandParent");
 				GrandParent.transform.position = rotationCenter;
 				ParentObject.transform.SetParent(GrandParent.transform, true);
 			}
@@ -100,8 +95,7 @@ namespace Assets.Scripts
 
 		private void CompleteRotateObjects(object sender, EventArgs e)
 		{
-			ParentObject.transform.SetParent(null);	
-			//Destroy(_grandParent);
+			ParentObject.transform.SetParent(null);
 		}
 	}
 }

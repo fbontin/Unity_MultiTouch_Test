@@ -12,8 +12,6 @@ namespace Assets.Scripts
 		public GameObject MapMarkers;
 		public GameObject ParentObject;
 
-		//private GameObject mapMarker;
-
 		private void OnEnable()
 		{
 			GetComponent<TapGesture>().Tapped += ShowNewGeocommentInput;
